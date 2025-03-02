@@ -30,7 +30,7 @@ npm run tests
    - The simplest solution would be to search for the largest palindromic number by iterating in descending order from the upper limit, checking each number until we find the first palindromic one.
 
 2. **Lychrel Method**:
-   - I tried to find a property or method that could reduce the search space, dividing it in half or even further. One possible approach is using the *Lychrel process* from the Wikipedia page, which helps generate palindromic numbers from non-palindromic ones. I could not make this algotithm faster than the other 2 because Lychrel takes many interations. One improvement I did was to iterate numbers divisive by 11, which's a property =.
+   - I tried to find a property or method that could reduce the search space, ideally by dividing it in half or even further. One possible approach is using the Lychrel process, as described on the Wikipedia page, which helps generate palindromic numbers from non-palindromic ones. However, I couldn't make this algorithm faster than the other two because the Lychrel process requires many iterations. One improvement I implemented was iterating over numbers divisible by 11, leveraging this mathematical property of even palindromes.
 
 3. **Descending Optimized Method**:
-   - By using the Lychrel process, we can quickly generate potential palindromic numbers and then check them linearly to find the largest one within the specified range.
+   - This method works by taking the upper-limit number and splitting it in half. The idea is to generate only palindromes by reducing the left half by 1 on each iteration and then mirroring it to form the right half. While this approach doesn't guarantee the largest palindrome, it helps reduce the search space, making the process more efficient. Similar to the Lychrel method, once a palindrome is generated, a secondary search is performed to ensure the maximum palindrome..
