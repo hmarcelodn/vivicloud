@@ -56,7 +56,7 @@ const findLargestPalindromAscendingGeneration = (lowerBoundary, upperBoundary) =
         : parseInt(currentString.slice(0, middleIndex + 1));
 
     while (rightHalf < upperBoundary) {
-        const rightHalfReversed = rightHalf.toString().split('').reverse().join('');
+        const rightHalfReversed = reverseNumber(rightHalf);
         const newPalindrom = Number(rightHalf.toString() + rightHalfReversed.slice(digits % 2));
 
         if (newPalindrom < upperBoundary) {
