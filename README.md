@@ -21,7 +21,7 @@ npm run start
 
 For executing the Unit Tests:
 ```
-npm run tests
+npm run test
 ```
 
 ## Thought Process and Approach
