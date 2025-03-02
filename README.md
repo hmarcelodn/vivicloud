@@ -4,7 +4,7 @@ This application finds the largest palindromic number between two given numbers 
 
 ## Claritications
 
-This project is built with simplicity in mind, focusing solely in the problem, using NodeJS and Javscript. My straight intuition was brute-force, then lychrel because I though it could bring some benefit and a descending mechanism generating palindromic numbers. Every strategy returns the found number and the number of iterations involved to achieve this.
+This project is built with simplicity in mind, focusing solely in the problem, using NodeJS and Javscript. My straight intuition was brute-force, then lychrel because I though it could bring some benefit or amortized cost and a descending mechanism generating palindromic numbers. Every strategy returns the found number and the number of iterations involved to achieve this.
 
 ## Prerequisites
 
