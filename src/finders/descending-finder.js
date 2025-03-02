@@ -4,6 +4,10 @@ const findDescendingLargestPalindromLinear = (lowerBoundary, upperBoundary) => {
     lowerBoundary = lowerBoundary + 1;
     upperBoundary = upperBoundary - 1;
 
+    if (upperBoundary < 10) {
+        return { palindrom: upperBoundary, loops: 0 };
+    }
+
     if (upperBoundary < 10 || lowerBoundary === upperBoundary) {
         return { palindrom: upperBoundary, loops: 0 };
     }

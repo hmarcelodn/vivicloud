@@ -19,6 +19,19 @@ const rl = readline.createInterface({
 
 const question = promisify(rl.question).bind(rl);
 
+
+const getValidNumber = async (prompt) => {
+    while (true) {
+        let input = await question(chalk.yellow(prompt));
+        let parsed = parseInt(input);
+        if (!isNaN(parsed) && parsed >= 0) {
+            return parsed;
+        } else {
+            console.log(chalk.red('Invalid input. Please enter a non-negative number.'));
+        }
+    }
+};
+
 (async () => {
     console.clear();
     
@@ -33,8 +46,9 @@ ${chalk.yellow('3.')} ${chalk.bold('Palindromic Generator (best-effort)')}: This
                           one, it may not be the max palindromic, so as Lychrel, needs to check for a max.                    
     `));
     
-    let start = await question(chalk.yellow('Indicate the lower boundary: '));
-    let end = await question(chalk.yellow('Indicate the upper boundary: '));
+    let start = await getValidNumber(chalk.yellow('Indicate the lower boundary (non-negative): '));
+    let end = await getValidNumber(chalk.yellow('Indicate the upper boundary (non-negative): '));
+
     start = parseInt(start);
     end = parseInt(end);
 
