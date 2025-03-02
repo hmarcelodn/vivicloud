@@ -2,10 +2,15 @@
 
 This application finds the largest palindromic number between two given numbers (exclusive). A palindromic number is a number that reads the same forwards and backwards (e.g., 16461). For more information, check out [Wikipedia](https://en.wikipedia.org/wiki/Palindromic_number).
 
+## Claritications
+
+This project is built with simplicity in mind, focusing solely in the problem, using NodeJS and Javscript. My straight intuition was brute-force, then lychrel because I though it could bring some benefit and a descending mechanism generating palindromic numbers.
+
 ## Prerequisites
 
 1. **Install Node.js**:
    - Download and install the LTS version of Node.js from [here](https://nodejs.org/en).
+   - This instalation makes available `node` CLI and `npm` CLI.
 
 2. **Install dependencies**:
    - Run the command `npm install` in the root folder of the project (where the `package.json` file is located).
