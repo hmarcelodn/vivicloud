@@ -29,6 +29,9 @@ For executing the Unit Tests:
 npm run test
 ```
 
+<img width="717" alt="Screenshot 2025-03-02 at 11 14 07 AM" src="https://github.com/user-attachments/assets/567efea3-4255-46fa-bf0c-5209a09c7c1e" />
+
+
 ## Thought Process and Approach
 
 1. **Descending Method (brute force)**:
@@ -42,3 +45,7 @@ npm run test
 3. **Descending Optimized Method**:
    - This method works by taking the upper-limit number and splitting it in half. The idea is to generate only palindromes by reducing the left half by 1 on each iteration and then mirroring it to form the right half. While this approach doesn't guarantee the largest palindrome, it helps reduce the search space, making the process more efficient. Similar to the Lychrel method, once a palindrome is generated, a secondary search is performed to ensure the maximum palindrome.
    - **Time complexity**: `O((n - m)/(d / 2) + p)` `O((n - m)/11 + p)` where `n` is the lowerBoundary, `m` the upper boundary and `p` the lychrel palidrom number and `d` the number of digits.
+
+## Example
+
+<img width="1156" alt="Screenshot 2025-03-02 at 11 13 39 AM" src="https://github.com/user-attachments/assets/09832960-5a94-47cf-9dd8-0fa3cb5a76fb" />
