@@ -1,5 +1,9 @@
 import { isPalindromic } from '../utils/palindromic-checker.js';
+import { reverseNumber } from '../utils/reverse-number.js';
 
+/**
+ * 
+ */
 const findByLychrelProcess = (lowerBoundary, upperBoundary) => {
     let loops = 0;
 
@@ -13,12 +17,11 @@ const findByLychrelProcess = (lowerBoundary, upperBoundary) => {
         };
     }
 
-    //let lychrelSum = 0;
     let upperBoundaryChanging = upperBoundary;
     let lastPalindrom = 0;
     
     while (lowerBoundary < upperBoundaryChanging) {
-        const reverseCandidate = parseInt(upperBoundaryChanging.toString().split('').reverse().join(''));
+        const reverseCandidate = parseInt(reverseNumber(upperBoundaryChanging));
         const lychrelSum = upperBoundaryChanging + reverseCandidate;
     
         if (isPalindromic(lychrelSum) && lychrelSum <= upperBoundary) {

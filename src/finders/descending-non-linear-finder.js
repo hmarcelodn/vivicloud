@@ -1,4 +1,5 @@
 import { findLargestPalindromLinear } from './descending-finder.js';
+import { reverseNumber } from '../utils/reverse-number.js';
 
 const findLargestPalindromDescendingGeneration = (lowerBoundary, upperBoundary) => {
     let loops = 0;
@@ -11,9 +12,8 @@ const findLargestPalindromDescendingGeneration = (lowerBoundary, upperBoundary) 
         ? parseInt(currentString.slice(0, middleIndex))
         : parseInt(currentString.slice(0, middleIndex + 1));
 
-    while (leftHalf < upperBoundary && leftHalf > lowerBoundary) {
-        console.log(leftHalf, upperBoundary)
-        const leftHalfReversed = leftHalf.toString().split('').reverse().join('');
+    while (leftHalf < upperBoundary && leftHalf > lowerBoundary) {        
+        const leftHalfReversed = reverseNumber(leftHalf);
         const rightHalf = leftHalfReversed.slice(digits % 2);            
         const newPalindrom = Number(leftHalf.toString() + rightHalf);
 

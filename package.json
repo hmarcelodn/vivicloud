@@ -4,10 +4,9 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "jest",
+    "test": "node --test",
     "start": "node src/index.js",
-    "start:dev": "node --watch src/index.js",
-    "coverage": "jest --collect-coverage"
+    "start:dev": "node --watch src/index.js"
   },
   "keywords": [],
   "author": "",
