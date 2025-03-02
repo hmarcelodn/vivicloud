@@ -81,4 +81,17 @@ describe('Test Lychrel Process Palindrom', {}, () => {
         // Assert
         assert.strictEqual(palindrom, expectedPalindrom);
     });
+
+    test('Should find 292 as palindrom for 1-300', () => {
+        // Arrange
+        const rangeStart = 1;
+        const rangeEnd = 300;
+        const expectedPalindrom = 292;
+
+        // Act
+        const { palindrom } = findLargestPalindromFromLychrel(rangeStart, rangeEnd);
+
+        // Assert
+        assert.strictEqual(palindrom, expectedPalindrom);
+    });
 });

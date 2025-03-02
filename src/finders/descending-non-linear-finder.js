@@ -1,4 +1,4 @@
-import { findLargestPalindromLinear } from './descending-finder.js';
+import { findAscendingLargestPalindromLinear } from './ascending-finder.js';
 import { reverseNumber } from '../utils/reverse-number.js';
 
 const findLargestPalindromDescendingGeneration = (lowerBoundary, upperBoundary) => {
@@ -26,7 +26,10 @@ const findLargestPalindromDescendingGeneration = (lowerBoundary, upperBoundary) 
         loops++;
     };
 
-    const maxPalidrom = findLargestPalindromLinear(lastPalindrom, upperBoundary);
+    const maxPalidrom = findAscendingLargestPalindromLinear(
+        lastPalindrom === 0 ? lowerBoundary : lastPalindrom, 
+        upperBoundary
+    );
     return { 
         palindrom: 
             lowerBoundary > Math.max(lastPalindrom, maxPalidrom.palindrom) ? 

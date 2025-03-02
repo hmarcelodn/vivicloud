@@ -1,6 +1,6 @@
 import { isPalindromic } from '../utils/palindromic-checker.js';
 import { reverseNumber } from '../utils/reverse-number.js';
-
+import { findAscendingLargestPalindromLinear } from './ascending-finder.js';
 /**
  * 
  */
@@ -44,34 +44,6 @@ const findByLychrelProcess = (lowerBoundary, upperBoundary) => {
     return { palindrom: lastPalindrom, loops };
 };
 
-const findLargestPalindromAscendingGeneration = (lowerBoundary, upperBoundary) => {
-    let loops = 0;
-    let lastPalindrom = 0;
-
-    const currentString = lowerBoundary.toString();
-    const digits = currentString.split('').length;
-    const middleIndex = Math.floor(digits / 2);
-    let rightHalf = digits % 2 === 0
-        ? parseInt(currentString.slice(0, middleIndex))
-        : parseInt(currentString.slice(0, middleIndex + 1));
-
-    while (rightHalf < upperBoundary) {
-        const rightHalfReversed = reverseNumber(rightHalf);
-        const newPalindrom = Number(rightHalf.toString() + rightHalfReversed.slice(digits % 2));
-
-        if (newPalindrom < upperBoundary) {
-            lastPalindrom = newPalindrom;
-        } else {
-            break;
-        }
-
-        rightHalf++;
-        loops++;
-    };
-
-    return { palindrom: lastPalindrom, loops };    
-}
-
 const findLargestPalindromFromLychrel = (lowerBoundary, upperBoundary) => {
     if (lowerBoundary >= upperBoundary) {
         return { palindrom: 0, loops: 0 };
@@ -81,10 +53,11 @@ const findLargestPalindromFromLychrel = (lowerBoundary, upperBoundary) => {
         lowerBoundary, 
         upperBoundary
     );
-    const largestPalindromFromLychrel = findLargestPalindromAscendingGeneration(
-        largestLychrelPalindrom.palindrom, 
+    const largestPalindromFromLychrel = findAscendingLargestPalindromLinear(
+        largestLychrelPalindrom.palindrom === 0 ? lowerBoundary : largestLychrelPalindrom.palindrom, 
         upperBoundary
     );
+
     const loops = largestLychrelPalindrom.loops + largestPalindromFromLychrel.loops;
     const maxPalindrom = Math.max(
         largestLychrelPalindrom.palindrom, 
@@ -99,6 +72,5 @@ const findLargestPalindromFromLychrel = (lowerBoundary, upperBoundary) => {
 };
 
 export { 
-    findLargestPalindromFromLychrel, 
-    findLargestPalindromAscendingGeneration 
+    findLargestPalindromFromLychrel 
 };

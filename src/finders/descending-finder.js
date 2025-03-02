@@ -1,6 +1,6 @@
 import { isPalindromic } from '../utils/palindromic-checker.js';
 
-const findLargestPalindromLinear = (lowerBoundary, upperBoundary) => {
+const findDescendingLargestPalindromLinear = (lowerBoundary, upperBoundary) => {
     lowerBoundary = lowerBoundary + 1;
     upperBoundary = upperBoundary - 1;
 
@@ -9,7 +9,7 @@ const findLargestPalindromLinear = (lowerBoundary, upperBoundary) => {
     }
 
     let loops = 0;
-    while (lowerBoundary < upperBoundary) {
+    while (lowerBoundary <= upperBoundary) {
         if (isPalindromic(upperBoundary)) {
             return { palindrom: upperBoundary, loops };
         }
@@ -20,4 +20,4 @@ const findLargestPalindromLinear = (lowerBoundary, upperBoundary) => {
     return { palindrom: 0, loops };
 };
 
-export { findLargestPalindromLinear };
+export { findDescendingLargestPalindromLinear };

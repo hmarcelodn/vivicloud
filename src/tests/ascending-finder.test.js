@@ -1,9 +1,9 @@
 import { describe, test } from 'node:test'
 import assert from 'node:assert';
 
-import { findLargestPalindromDescendingGeneration } from '../finders/descending-non-linear-finder.js';
+import { findAscendingLargestPalindromLinear } from '../finders/ascending-finder.js';
 
-describe('Test Non Linear Palindrom', {  skip: false }, () => {
+describe('Test Linear Palindrom', { skip: false }, () => {
     test('Should find 9 as palindrom for 1-10', () => {
         // Arrange
         const rangeStart = 1;
@@ -11,7 +11,7 @@ describe('Test Non Linear Palindrom', {  skip: false }, () => {
         const expectedPalindrom = 9;
 
         // Act
-        const { palindrom } = findLargestPalindromDescendingGeneration(rangeStart, rangeEnd);
+        const { palindrom } = findAscendingLargestPalindromLinear(rangeStart, rangeEnd);
 
         // Assert
         assert.strictEqual(palindrom, expectedPalindrom);
@@ -24,7 +24,7 @@ describe('Test Non Linear Palindrom', {  skip: false }, () => {
         const expectedPalindrom = 99;
 
         // Act
-        const { palindrom } = findLargestPalindromDescendingGeneration(rangeStart, rangeEnd);
+        const { palindrom } = findAscendingLargestPalindromLinear(rangeStart, rangeEnd);
 
         // Assert
         assert.strictEqual(palindrom, expectedPalindrom);
@@ -37,7 +37,7 @@ describe('Test Non Linear Palindrom', {  skip: false }, () => {
         const expectedPalindrom = 999;
 
         // Act
-        const { palindrom } = findLargestPalindromDescendingGeneration(rangeStart, rangeEnd);
+        const { palindrom } = findAscendingLargestPalindromLinear(rangeStart, rangeEnd);
 
         // Assert
         assert.strictEqual(palindrom, expectedPalindrom);
@@ -50,7 +50,7 @@ describe('Test Non Linear Palindrom', {  skip: false }, () => {
         const expectedPalindrom = 101;
 
         // Act
-        const { palindrom } = findLargestPalindromDescendingGeneration(rangeStart, rangeEnd);
+        const { palindrom } = findAscendingLargestPalindromLinear(rangeStart, rangeEnd);
 
         // Assert
         assert.strictEqual(palindrom, expectedPalindrom);
@@ -63,7 +63,7 @@ describe('Test Non Linear Palindrom', {  skip: false }, () => {
         const expectedPalindrom = 0;
 
         // Act
-        const { palindrom } = findLargestPalindromDescendingGeneration(rangeStart, rangeEnd);
+        const { palindrom } = findAscendingLargestPalindromLinear(rangeStart, rangeEnd);
 
         // Assert
         assert.strictEqual(palindrom, expectedPalindrom);
@@ -76,7 +76,7 @@ describe('Test Non Linear Palindrom', {  skip: false }, () => {
         const expectedPalindrom = 0;
 
         // Act
-        const { palindrom } = findLargestPalindromDescendingGeneration(rangeStart, rangeEnd);
+        const { palindrom } = findAscendingLargestPalindromLinear(rangeStart, rangeEnd);
 
         // Assert
         assert.strictEqual(palindrom, expectedPalindrom);

@@ -3,11 +3,11 @@ import { promisify } from 'util';
 import chalk from 'chalk';
 
 import { findLargestPalindromFromLychrel } from './finders/lychrel-number-finder.js';
-import { findLargestPalindromLinear } from './finders/descending-finder.js';
+import { findDescendingLargestPalindromLinear } from './finders/descending-finder.js';
 import { findLargestPalindromDescendingGeneration } from './finders/descending-non-linear-finder.js'
 
 const EXECUTION_MODE_MAP = {
-    LINEAR: findLargestPalindromLinear,
+    LINEAR: findDescendingLargestPalindromLinear,
     LYNCHREL: findLargestPalindromFromLychrel,
     PALINDROME_GEN: findLargestPalindromDescendingGeneration
 };
