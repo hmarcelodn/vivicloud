@@ -42,9 +42,9 @@ npm run test
    - I tried to find a property or method that could reduce the search space, ideally by dividing it in half or even further. One possible approach is using the Lychrel process, as described on the Wikipedia page, which helps generate palindromic numbers from non-palindromic ones. However, I couldn't make this algorithm faster than the other two because the Lychrel process requires many iterations some times. One improvement I implemented was iterating over numbers divisible by 11, leveraging this mathematical property of even palindromes.
    - **Time complexity**: `O((n - m)/11 + p)` where `n` is the lowerBoundary, `m` the upper boundary and `p` the lychrel palidrom number.
 
-3. **Descending Optimized Method**:
-   - This method works by taking the upper-limit number and splitting it in half. The idea is to generate only palindromes by reducing the left half by 1 on each iteration and then mirroring it to form the right half. While this approach doesn't guarantee the largest palindrome, it helps reduce the search space, making the process more efficient. Similar to the Lychrel method, once a palindrome is generated, a secondary search is performed to ensure the maximum palindrome.
-   - **Time complexity**: `O((n - m)/(d / 2) + p)` `O((n - m)/11 + p)` where `n` is the lowerBoundary, `m` the upper boundary and `p` the lychrel palidrom number and `d` the number of digits.
+3. **Descending Method**:
+   - This method works by counting the number of digits and trying to generate halves for every number of digit.
+   - **Time complexity**: `O(10^((n - m)/2))`
 
 ## Example
 
