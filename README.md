@@ -48,4 +48,5 @@ npm run test
 
 ## Example
 
-<img width="1156" alt="Screenshot 2025-03-02 at 11 13 39 AM" src="https://github.com/user-attachments/assets/09832960-5a94-47cf-9dd8-0fa3cb5a76fb" />
+<img width="1278" alt="Screenshot 2025-03-04 at 9 19 35 AM" src="https://github.com/user-attachments/assets/39f4019f-77a9-41ea-b448-63a939b5e94d" />
+
