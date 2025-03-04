@@ -64,6 +64,7 @@ ${chalk.yellow('3.')} ${chalk.bold('Palindromic Generator (optimized)')}: This s
 
         console.log(chalk.cyan('\nPalindrom Results:'));
         console.table(tableData);        
+        console.log('Press Ctrl+C to finish');
     } catch (e) {
         console.log(chalk.red('Error: '), e.message);
         throw e;
