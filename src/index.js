@@ -42,8 +42,7 @@ ${chalk.yellow('1.')} ${chalk.bold('Linear Finder (brute-force)')}: This strateg
 ${chalk.yellow('2.')} ${chalk.bold('Lychrel Process (best-effort)')}: This strategy tries to find at least 1 palindromic number lower than upper boundary
                     in order to reduce the search space. Then applies an ascending search from this palindromic number
                     up to the upper boundary to validate if there's a max number than itself.
-${chalk.yellow('3.')} ${chalk.bold('Palindromic Generator (best-effort)')}: This strategy tries to generate palidromic numbers from the upper boundary, as soon as it found 
-                          one, it may not be the max palindromic, so as Lychrel, needs to check for a max.                    
+${chalk.yellow('3.')} ${chalk.bold('Palindromic Generator (optimized)')}: This strategy tries to generate palidromic numbers using the number of digits and does not need max checking.                    
     `));
     
     let start = await getValidNumber(chalk.yellow('Indicate the lower boundary (non-negative): '));
