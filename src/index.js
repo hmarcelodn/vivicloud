@@ -4,12 +4,12 @@ import chalk from 'chalk';
 
 import { findLargestPalindromFromLychrel } from './finders/lychrel-number-finder.js';
 import { findDescendingLargestPalindromLinear } from './finders/descending-finder.js';
-import { findLargestPalindromDescendingGeneration } from './finders/descending-non-linear-finder.js'
+import { longestPalindromGenerator } from './finders/palindrom-generator.js';
 
 const EXECUTION_MODE_MAP = {
     LINEAR: findDescendingLargestPalindromLinear,
     LYNCHREL: findLargestPalindromFromLychrel,
-    PALINDROME_GEN: findLargestPalindromDescendingGeneration
+    PALINDROME_GEN: longestPalindromGenerator
 };
 
 const rl = readline.createInterface({
